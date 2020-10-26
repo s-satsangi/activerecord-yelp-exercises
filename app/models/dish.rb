@@ -6,7 +6,14 @@ class Dish < ActiveRecord::Base
     validates :name, presence: true
     validates :restaurant, presence: true
     
-    #validates :name 
+  
+    def tags
+       #DishTag.pluck()
+        dish_tags.pluck(tag_ids)
+
+
+    end
+
 
 
 end
